@@ -18,6 +18,7 @@ public class ValidatorEngine {
         ServiceLoader.load(Rule.class).forEach(rules::add);
     }
 
+
     public List<Issue> validate(Document document) {
         List<Issue> issues = new ArrayList<>();
         for (Rule rule : rules) {
