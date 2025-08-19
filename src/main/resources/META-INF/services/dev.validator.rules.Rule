@@ -1,0 +1,6 @@
+dev.validator.rules.DoctypeRule
+dev.validator.rules.HtmlLangRule
+dev.validator.rules.MetaCharsetRule
+dev.validator.rules.ImgAltRule
+dev.validator.rules.NoopenerRule
+dev.validator.rules.DuplicateIdRule
