@@ -1,0 +1,6 @@
+com.example.htmlvalidator.rules.DoctypeRule
+com.example.htmlvalidator.rules.HtmlLangRule
+com.example.htmlvalidator.rules.MetaCharsetRule
+com.example.htmlvalidator.rules.ImgAltRule
+com.example.htmlvalidator.rules.NoopenerRule
+com.example.htmlvalidator.rules.DuplicateIdRule
