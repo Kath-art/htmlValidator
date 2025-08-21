@@ -66,9 +66,9 @@ public class ValidatorController {
         StringBuilder sb = new StringBuilder("<html><body>");
         sb.append("<h2>Results for ").append(source).append("</h2>");
         if (issues.isEmpty()) {
-            sb.append("<p style='color:green'>✅ No issues found.</p>");
+            sb.append("<p style='color:green'>No issues found.</p>");
         } else {
-            sb.append("<p>⚠️ Found ").append(issues.size()).append(" issue(s):</p><ul>");
+            sb.append("<p>Found ").append(issues.size()).append(" issue(s):</p><ul>");
             issues.forEach(i -> sb.append("<li>").append(i.toString()).append("</li>"));
             sb.append("</ul>");
         }
