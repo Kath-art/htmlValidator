@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation Results</title>
+</head>
+<body>
+<h2>Results for [[${source}]]</h2>
+
+<div th:if="${error}">
+    <p style="color:red" th:text="${error}"></p>
+</div>
+
+<div th:if="${issues}">
+    <p th:if="${#lists.isEmpty(issues)}" style="color:green">No issues found.</p>
+    <ul th:if="${!#lists.isEmpty(issues)}">
+        <li th:each="issue : ${issues}" th:text="${issue}"></li>
+    </ul>
+</div>
+
+<p><a href="/validate/form">Back to form</a></p>
+</body>
+</html>
