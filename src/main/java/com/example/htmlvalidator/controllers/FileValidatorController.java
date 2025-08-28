@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/validate-html")
+@RequestMapping("/validate-file")
 public class FileValidatorController implements ValidateHtmlController {
     private final ValidatorEngine engine;
 
@@ -24,7 +24,7 @@ public class FileValidatorController implements ValidateHtmlController {
     }
 
     @Override
-    @PostMapping(value = "/file")
+    @PostMapping
     @ResponseBody
     public void validateHtml(@RequestBody String htmlContent) {
         try {

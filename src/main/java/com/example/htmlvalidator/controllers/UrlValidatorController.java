@@ -16,23 +16,19 @@ import org.springframework.web.server.ResponseStatusException;
 import java.io.IOException;
 
 @Controller
-@RequestMapping("validate-html")
+@RequestMapping("validate-url")
 public class UrlValidatorController implements ValidateHtmlController {
-
     private final ValidatorEngine engine;
 
-    public UrlValidatorController(ValidatorEngine engine) {
-        this.engine = engine;
-    }
+    public UrlValidatorController(ValidatorEngine engine) { this.engine = engine;}
 
-    // Landing page form
     @GetMapping
     public String form() {
         return "url-form";
     }
 
     @Override
-    @PostMapping(value = "/url")
+    @PostMapping
     @ResponseBody
     public void validateHtml(@RequestParam String htmlContent) {
         try {
